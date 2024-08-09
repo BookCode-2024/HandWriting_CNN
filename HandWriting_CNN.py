@@ -34,18 +34,14 @@ plt.imshow(X_train[7], cmap=plt.get_cmap('gray'))
 
 plt.show()
 
-
-import matplotlib.pyplot as plt
 import scipy.io as scio
 from keras.utils import np_utils # 导入np_utils是为了用one hot encoding方法将输出标签的向量（vector）转化为只在出现对应标签的那一列为1，其余为0的布尔矩阵
-import matplotlib.pyplot as plt
 from keras.optimizers import Adam
 from keras.models import Model, load_model
 from keras.layers import Flatten, Dense
 from keras.layers import MaxPooling2D, Dropout
 from keras.layers import Input, Activation, Conv2D
 
-(X_train,y_train),(X_test,y_test) = mnist.load_data() #加载数据
 
 #给定的像素的灰度值在0-255，为了使模型的训练效果更好，通常将数值归一化映射到0-1
 X_train = X_train / 255
@@ -60,7 +56,7 @@ y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 
 
-# 搭建神CNN网络模型 ，创建一个函数，建立含有一个隐层的神经网络
+# 搭建CNN网络模型
 def HW_CNN(input_shape):
     
     X_input = Input(input_shape)
