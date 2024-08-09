@@ -10,6 +10,7 @@ Created on Wed Apr 14 20:32:32 2021
 #一共统计了来自250个不同的人手写数字图片，其中50%是高中生，50%来自人口普查局的工作人员
 #在上述数据集中，训练集一共包含了 60,000 张图像和标签，而测试集一共包含了 10,000 张图像和标签
 
+#Tensorflow1.13.1 and Keras2.2.4
 ###################数据加载####################################
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
